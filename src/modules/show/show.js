@@ -16,13 +16,17 @@ export default class Show {
         <div>
             <img src="${this.image.medium}"/>
         </div>
-            <span>${this.name}</span>
-            <div class="likes">
-                <i class="fa fa-heart-o" aria-hidden="true"></i>
-                <span>5 likes</span>
+            <div class="block">
+              <span>${this.name}</span>
+              <div class="likes">
+                  <i class="fa fa-heart-o" aria-hidden="true"></i>
+                  <span>5 likes</span>
+              </div>
             </div>
-        <button>Comments</button>
-        <button>Reservations</button>
+        <div class="buttonContainer">
+          <button>Comments</button>
+          <button>Reservations</button>
+        </div>
     </div> `;
   }
 }

@@ -58,10 +58,13 @@ body {
 
   .content {
     // border: 1px solid black;
-    height: 59.3vh;
+    // height: 59.3vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    margin: 20%;
+    gap: 30px;
+    margin: 5% 30%;
+
+    @include font-generic(normal, 15px, 400, 2px, hsl(0, 0%, 25%));
   }
 
   .footer {

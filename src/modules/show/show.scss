@@ -1,5 +1,51 @@
-.likes {
+@mixin font-generic($font-style, $font-size, $font-weight, $word-spacing, $color, $font-family: "Roboto") {
+  font-style: $font-style;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  word-spacing: $word-spacing;
+  color: $color;
+  font-family: $font-family, sans-serif;
+}
+
+img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.block {
   display: flex;
-  justify-content: center;
-  border: 1px solid black;
+  justify-content: space-between;
+
+  .likes {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: flex-end;
+    // border: 1px solid black;
+    width: 40%;
+    gap: 5px;
+  }
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 10px 0;
+
+  button {
+    padding: 10px 40px;
+    cursor: pointer;
+
+    @include font-generic(normal, 15px, 400, 1px, hsl(0, 0%, 25%));
+
+    box-shadow: 2px 3px hsl(0, 0%, 75%);
+    border: none;
+    border-radius: 5px;
+  }
+
+  button:active {
+    background: hsl(0, 0%, 65%);
+    color: white;
+  }
 }
