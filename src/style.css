@@ -1,3 +1,38 @@
-.test-color {
-  color: yellow;
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=Lobster&family=Oswald&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+html {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  font-family: 'Lato', sans-serif;
+  background-color: #333;
+  padding: 10px 15px;
+  letter-spacing: 0.01em;
+  font-size: 15px;
+  margin: auto;
+}
+
+header ul li {
+  list-style: none;
+  margin-top: 5px;
+}
+
+header a {
+  text-decoration: none;
+  color: #fff;
+  margin-right: 3.5rem;
+  font-size: 1.3rem;
+}
+
+.headerlogo {
+  width: 150px;
+  height: 40px;
+  margin-left: 50px;
+  margin-right: 60px;
 }
