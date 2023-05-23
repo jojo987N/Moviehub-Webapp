@@ -1,21 +1,26 @@
 /* eslint-disable arrow-parens */
 import './style.scss';
 import './style.css';
-import Show from './modules/show/show.js';
 import Store from './modules/store.js';
 import App from './modules/app.js';
 import Likes from './modules/likes/likes.js';
+import Like from './modules/like/like.js';
 import init from './modules/utils.js';
-
 import CommentPopup from './modules/show/commentPopup.js';
 
 (async () => {
   const app = localStorage.getItem('app') || await (new App()).id;
   localStorage.setItem('app', app);
   await init();
-  const likes = await Likes.store();
   const store = new Store();
-  document.querySelector('.content').innerHTML = (await store.shows).map(v => (new Show(v)).render(likes)).join('');
+  await store.display();
+  document.querySelectorAll('.show').forEach((show, i) => {
+    show.querySelector('.like').onclick = () => {
+      Likes.add(new Like(i + 1));
+      const likes = show.querySelector('.likes-nb');
+      likes.innerHTML = parseInt(likes.innerHTML, 10) + 1;
+    };
+  });
 })();
 
 document.addEventListener('click', (event) => {
