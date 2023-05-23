@@ -4,9 +4,7 @@ import './style.css';
 import Store from './modules/store.js';
 import App from './modules/app.js';
 import Likes from './modules/likes/likes.js';
-
 import Like from './modules/like/like.js';
-import init from './modules/utils.js';
 import init from './modules/utils.js';
 import CommentPopup from './modules/show/commentPopup.js';
 
@@ -14,7 +12,6 @@ import CommentPopup from './modules/show/commentPopup.js';
   const app = localStorage.getItem('app') || await (new App()).id;
   localStorage.setItem('app', app);
   await init();
-  const likes = await Likes.store();
   const store = new Store();
   await store.display();
   document.querySelectorAll('.show').forEach((show, i) => {
