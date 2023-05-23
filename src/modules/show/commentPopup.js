@@ -22,8 +22,8 @@ export default class CommentPopup {
     }
     const popupContainer = document.createElement('div');
     popupContainer.classList.add('popup-container');
-    popupContainer.style.width = '800px';
-    popupContainer.style.height = '700px';
+    // popupContainer.style.width = '800px';
+    // popupContainer.style.height = '700px';
     popupContainer.style.backgroundColor = '#d3d3d3';
     popupContainer.style.position = 'fixed';
     popupContainer.style.top = '50%';

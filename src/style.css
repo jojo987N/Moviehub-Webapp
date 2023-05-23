@@ -54,6 +54,9 @@ header a {
 .popup-container {
   text-align: center;
   padding: 20px;
+  width: 50%;
+  height: 90%;
+  border: 1px solid #000;
 }
 
 .popup-container img {
