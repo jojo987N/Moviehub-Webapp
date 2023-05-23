@@ -13,15 +13,15 @@ export default class Show {
   }
 
   render(likes) {
-    return `<div>
+    return `<div id="${this.id}" class="show">
         <div>
             <img src="${this.image.medium}"/>
         </div>
             <div class="block">
               <span>${this.name}</span>
               <div class="likes">
-                  <i class="fa fa-heart-o" aria-hidden="true"></i>
-                  <span>${(likes.find((like) => like.item_id === this.id) || []).likes || 0} likes</span>
+                  <i class="fa fa-heart-o like" aria-hidden="true"></i>
+                  <span><span class="likes-nb">${(likes.find((like) => like.item_id === this.id) || []).likes || 0}</span> likes</span>
               </div>
             </div>
         <div class="buttonContainer">
