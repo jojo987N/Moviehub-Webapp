@@ -8,6 +8,7 @@ export default class App {
   }
 
   get id() {
-    return (async () => (await (await this._id).text()))();
+    return (async () => (await (await this._id).text())
+    )();
   }
 }

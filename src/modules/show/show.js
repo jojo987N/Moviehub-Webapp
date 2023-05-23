@@ -25,8 +25,8 @@ export default class Show {
               </div>
             </div>
         <div class="buttonContainer">
-          <button>Comments</button>
-          <button>Reservations</button>
+        <button class="commentsButton" data-id="${this.id}">Comments</button>
+        <button>Reservations</button>
         </div>
     </div> `;
   }
