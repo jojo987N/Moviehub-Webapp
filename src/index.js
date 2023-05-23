@@ -16,6 +16,6 @@ import Like from './modules/like/like.js';
       Likes.add(new Like(i + 1));
       const likes = show.querySelector('.likes-nb');
       likes.innerHTML = parseInt(likes.innerHTML, 10) + 1;
-    }
-  })
+    };
+  });
 })();

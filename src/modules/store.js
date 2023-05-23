@@ -12,7 +12,6 @@ export default class Store {
 
   async display() {
     const likes = await Likes.store();
-    document.querySelector('.content').innerHTML = (await this.shows).map(v => (new Show(v)).render(likes)).join('');
-
+    document.querySelector('.content').innerHTML = (await this.shows).map((v) => (new Show(v)).render(likes)).join('');
   }
 }
