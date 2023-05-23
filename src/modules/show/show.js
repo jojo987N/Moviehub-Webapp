@@ -2,8 +2,9 @@ import './show.scss';
 
 export default class Show {
   constructor({
-    image, name, language, genres, schedule,
+    id, image, name, language, genres, schedule,
   }) {
+    this.id = id;
     this.image = image;
     this.name = name;
     this.language = language;
@@ -24,8 +25,8 @@ export default class Show {
               </div>
             </div>
         <div class="buttonContainer">
-          <button>Comments</button>
-          <button>Reservations</button>
+        <button class="commentsButton" data-id="${this.id}">Comments</button>
+        <button>Reservations</button>
         </div>
     </div> `;
   }

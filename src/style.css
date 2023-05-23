@@ -6,6 +6,10 @@ html {
   padding: 0;
 }
 
+body {
+  font-family: 'Lato', sans-serif;
+}
+
 header {
   width: 100%;
   display: flex;
@@ -35,4 +39,86 @@ header a {
   height: 40px;
   margin-left: 50px;
   margin-right: 60px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.popup-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.popup-container img {
+  width: 50%;
+  height: 40%;
+}
+
+.hidden {
+  display: none;
+}
+
+.s-content {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+  background-color: #fed049;
+  padding-inline: 10px;
+}
+
+.s-content h4 {
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+
+.popup-container h1 {
+  background-color: #333;
+  color: #fff;
+  padding-inline: 10px;
+}
+
+.popup-container input {
+  height: 35px;
+  display: block;
+  width: 40%;
+  margin: 10px auto;
+  border: 1px solid #333;
+  outline: none;
+  border-radius: 8px;
+}
+
+.popup-container textarea {
+  height: 100px;
+  display: block;
+  width: 40%;
+  margin: 10px auto;
+  border: 1px solid #333;
+  border-radius: 8px;
+  outline: none;
+}
+
+.popup-container .submit-button {
+  height: 30px;
+  width: 20%;
+  margin-left: -20%;
+  text-align: left;
+  padding: 0 8px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  font-size: 15px;
+}
+
+.popup-container .submit-button:hover {
+  color: #ea9215;
+  background-color: #f1f1f1;
 }
