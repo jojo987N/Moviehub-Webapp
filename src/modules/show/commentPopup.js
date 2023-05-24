@@ -1,9 +1,12 @@
 import Store from '../store.js';
+import CommentApi from '../comments/commentApi.js';
+import Comment from '../comment/comment.js';
 
 export default class CommentPopup {
   constructor(selectedItem) {
     this.selectedItem = selectedItem;
     this.store = new Store();
+    this.commentApi = new CommentApi();
     this.nameInput = null;
     this.commentTextArea = null;
   }
@@ -22,8 +25,7 @@ export default class CommentPopup {
     }
     const popupContainer = document.createElement('div');
     popupContainer.classList.add('popup-container');
-    // popupContainer.style.width = '800px';
-    // popupContainer.style.height = '700px';
+
     popupContainer.style.backgroundColor = '#d3d3d3';
     popupContainer.style.position = 'fixed';
     popupContainer.style.top = '50%';
@@ -58,6 +60,9 @@ export default class CommentPopup {
     showSchedule.textContent = `Schedule: ${schedule.days} at ${schedule.time}`;
     sContent.appendChild(showSchedule);
     popupContainer.appendChild(sContent);
+    const commentsContainer = document.createElement('div');
+    commentsContainer.classList.add('comments-container');
+    popupContainer.appendChild(commentsContainer);
     const title = document.createElement('h3');
     title.textContent = 'Add a Comment';
     popupContainer.appendChild(title);
@@ -73,9 +78,12 @@ export default class CommentPopup {
     const submitButton = document.createElement('button');
     submitButton.classList.add('submit-button');
     submitButton.textContent = 'Comment';
+    submitButton.addEventListener('click', this.submit.bind(this)); // Bind the submit method to the class instance
+
     popupContainer.appendChild(submitButton);
 
     document.body.appendChild(popupContainer);
+    this.displayComments();
   }
 
   async fetchShowDetails() {
@@ -89,5 +97,39 @@ export default class CommentPopup {
     } catch (error) {
       throw Error('Error fetching show details:', error);
     }
+  }
+
+  displayComments = async () => {
+    const commentsContainer = document.querySelector('.comments-container');
+    commentsContainer.innerHTML = '';
+
+    const comments = await CommentApi.getComments(this.selectedItem);
+    const countComment = comments.length;
+    const countComments = document.createElement('h3');
+    countComments.textContent = `Total Comments( ${countComment})`;
+    commentsContainer.appendChild(countComments);
+    if (!Array.isArray(comments)) {
+      throw new Error('Invalid comments data. Expected an array of comments.');
+    }
+    const lastThreeComments = comments.slice(-3).reverse();
+
+    lastThreeComments.forEach((comment) => {
+      const commentElement = document.createElement('p');
+      commentElement.textContent = `${comment.creation_date}   ${comment.username} :  ${comment.comment}`;
+      commentsContainer.appendChild(commentElement);
+    });
+  }
+
+  async submit() {
+    const username = this.nameInput.value;
+    const commentText = this.commentTextArea.value;
+    if (!username && !commentText) {
+      throw new Error('Both value must be entered');
+    }
+    const comment = new Comment(this.selectedItem, username, commentText);
+    await CommentApi.postComment(comment.item_id, comment.username, comment.comment);
+    this.displayComments();
+    this.nameInput.value = '';
+    this.commentTextArea.value = '';
   }
 }
