@@ -104,9 +104,10 @@ export default class CommentPopup {
     commentsContainer.innerHTML = '';
 
     const comments = await CommentApi.getComments(this.selectedItem);
-    const countComment = comments.length;
+    const nonEmptyComments = comments.filter((comment) => comment.comment && comment.comment.trim() !== '');
+
+    const countComment = nonEmptyComments.length;
     const countComments = document.createElement('h3');
-    console.log('test');
     countComments.textContent = `Total Comments( ${countComment})`;
     commentsContainer.appendChild(countComments);
     if (!Array.isArray(comments)) {
@@ -115,6 +116,9 @@ export default class CommentPopup {
     const lastThreeComments = comments.slice(-3).reverse();
 
     lastThreeComments.forEach((comment) => {
+      if (!comment.comment || comment.comment.trim() === '') {
+        return;
+      }
       const commentElement = document.createElement('p');
       commentElement.textContent = `${comment.creation_date}   ${comment.username} :  ${comment.comment}`;
       commentsContainer.appendChild(commentElement);
