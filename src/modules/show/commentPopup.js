@@ -99,17 +99,27 @@ export default class CommentPopup {
     }
   }
 
+  commentCounter = async () => {
+    const comments = await CommentApi.getComments(this.selectedItem);
+
+    const nonEmptyComments = comments.filter((comment) => comment.comment && comment.comment.trim() !== '');
+
+    const countComment = nonEmptyComments.length;
+    return countComment;
+  }
+
   displayComments = async () => {
     const commentsContainer = document.querySelector('.comments-container');
     commentsContainer.innerHTML = '';
 
     const comments = await CommentApi.getComments(this.selectedItem);
-    const nonEmptyComments = comments.filter((comment) => comment.comment && comment.comment.trim() !== '');
 
-    const countComment = nonEmptyComments.length;
+    const countComment = await this.commentCounter();
     const countComments = document.createElement('h3');
     countComments.textContent = `Total Comments( ${countComment})`;
     commentsContainer.appendChild(countComments);
+    this.commentCounter();
+
     if (!Array.isArray(comments)) {
       throw new Error('Invalid comments data. Expected an array of comments.');
     }

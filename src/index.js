@@ -12,6 +12,7 @@ import CommentPopup from './modules/show/commentPopup.js';
   const app = localStorage.getItem('app') || await (new App()).id;
   localStorage.setItem('app', app);
   await init();
+
   const store = new Store();
   await store.display();
   document.querySelectorAll('.show').forEach((show, i) => {
