@@ -12,16 +12,16 @@ export default class Show {
     this.schedule = schedule;
   }
 
-  render() {
-    return `<div>
+  render(likes) {
+    return `<div id="${this.id}" class="show">
         <div>
             <img src="${this.image.medium}"/>
         </div>
             <div class="block">
               <span>${this.name}</span>
               <div class="likes">
-                  <i class="fa fa-heart-o" aria-hidden="true"></i>
-                  <span>5 likes</span>
+                  <i class="fa fa-heart-o like" aria-hidden="true"></i>
+                  <span><span class="likes-nb">${(likes.find((like) => like.item_id === this.id) || []).likes || 0}</span> likes</span>
               </div>
             </div>
         <div class="buttonContainer">

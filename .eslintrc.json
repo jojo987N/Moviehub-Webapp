@@ -17,7 +17,9 @@
       "import/extensions": [ 1, {
         "js": "always", "json": "always"
       }],
-      "max-len": "off"
+      "max-len": "off",
+      "no-return-await":"off",
+      "no-underscore-dangle":"off"
     },
     "ignorePatterns": [
       "dist/",
