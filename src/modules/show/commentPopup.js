@@ -106,6 +106,7 @@ export default class CommentPopup {
     const comments = await CommentApi.getComments(this.selectedItem);
     const countComment = comments.length;
     const countComments = document.createElement('h3');
+    console.log('test');
     countComments.textContent = `Total Comments( ${countComment})`;
     commentsContainer.appendChild(countComments);
     if (!Array.isArray(comments)) {
