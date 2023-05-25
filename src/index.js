@@ -1,4 +1,3 @@
-/* eslint-disable arrow-parens */
 import './style.scss';
 import './style.css';
 import Store from './modules/store.js';
