@@ -106,6 +106,7 @@ export default class CommentPopup {
     const nonEmptyComments = comments.filter((comment) => comment.comment && comment.comment.trim() !== '');
 
     const countComment = nonEmptyComments.length;
+    console.log(countComment);
     return countComment;
   }
 
