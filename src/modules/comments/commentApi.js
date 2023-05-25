@@ -34,12 +34,14 @@ export default class CommentApi {
   static async getComments(itemId) {
     const response = await fetch(`${baseApi}apps/${localStorage.getItem('app')}/comments/?item_id=${itemId}`);
     if (!response.ok) {
-      throw new Error('Failed to fetch comments');
+      // throw new Error('Failed to fetch comments');
+      return [];
     }
-    const comments = await response.json().catch(() => []);
-    if (!Array.isArray(comments)) {
-      throw new Error('Invalid comments data');
-    }
-    return comments;
+    return await response.json();
+    // const comments = await response.json().catch(() => []);
+    // if (!Array.isArray(comments)) {
+    //   throw new Error('Invalid comments data');
+    // }
+    // return comments;
   }
 }
