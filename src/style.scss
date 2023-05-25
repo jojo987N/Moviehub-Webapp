@@ -103,19 +103,19 @@ body {
         width: 80%;
 
         h4 {
-           @include font-generic(normal, 12px, 400, 1px, hsl(0, 0%, 85%));
-           margin-bottom: 5px;
+          @include font-generic(normal, 12px, 400, 1px, hsl(0, 0%, 85%));
+
+          margin-bottom: 5px;
         }
-      
+
         p {
           @include font-generic(normal, 15px, 400, 1px, hsl(0, 0%, 85%));
         }
       }
 
 
-  
+
       /* border: 3px solid green; */
     }
-  
   }
 }

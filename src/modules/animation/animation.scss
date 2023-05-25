@@ -1,23 +1,26 @@
-.container-animation{
-    width: 100vw;
-    height: 80vh;
-    display: flex;
-    // border: 1px solid green;
-    justify-content: center;
-    align-items: center;
-    #animation {
+.container-animation {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  // border: 1px solid green;
+  justify-content: center;
+  align-items: center;
+
+  #animation {
     // height: 200px;
     width: 200px;
   }
 }
-.hide{
-    display: none !important;
-}
-.container-anim{
-    display: flex;
-    justify-content: center;
-    #anim{
-        width: 50px;
-    }
+
+.hide {
+  display: none !important;
 }
 
+.container-anim {
+  display: flex;
+  justify-content: center;
+
+  #anim {
+    width: 50px;
+  }
+}

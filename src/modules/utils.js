@@ -28,12 +28,10 @@ export default async function display(shows, count) {
     };
   });
   document.querySelector('.show-more').onclick = async (e) => {
-    e.target.remove()
+    e.target.remove();
     const animation = new Animation('anim');
     animation.render();
     count += DEFAULT_INCREMENT_NB_ITEMS;
     display(shows, count);
-
-     
   };
 }
