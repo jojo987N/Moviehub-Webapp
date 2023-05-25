@@ -3,12 +3,7 @@ import './style.scss';
 import './style.css';
 import Store from './modules/store.js';
 import App from './modules/app.js';
-<<<<<<< HEAD
-import init, { display } from './modules/utils.js';
-=======
-import Likes from './modules/likes/likes.js';
-import Like from './modules/like/like.js';
->>>>>>> dev
+import { display } from './modules/utils.js';
 import CommentPopup from './modules/show/commentPopup.js';
 import { DEFAULT_NB_ITEMS } from './modules/global.js';
 
