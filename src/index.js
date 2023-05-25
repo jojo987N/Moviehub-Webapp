@@ -10,6 +10,8 @@ import { DEFAULT_NB_ITEMS } from './modules/global.js';
 (async () => {
   const app = localStorage.getItem('app') || await (new App()).id;
   localStorage.setItem('app', app);
+  // await init();
+
   const store = new Store();
   const shows = await store.shows;
   const count = DEFAULT_NB_ITEMS;
