@@ -10,6 +10,6 @@ export default class Likes {
     });
 
     static store() {
-       return (async () => (await fetch(`${URL_BASE}apps/${localStorage.getItem('app')}/likes/`)).json().catch(()=>[]) )();
+      return (async () => (await fetch(`${URL_BASE}apps/${localStorage.getItem('app')}/likes/`)).json().catch(() => []))();
     }
 }
