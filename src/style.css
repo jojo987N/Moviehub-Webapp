@@ -55,7 +55,7 @@ header a {
   text-align: center;
   padding: 20px;
   width: 50%;
-  height: 90%;
+  height: 95%;
   border: 1px solid #000;
 }
 
@@ -124,4 +124,18 @@ header a {
 .popup-container .submit-button:hover {
   color: #ea9215;
   background-color: #f1f1f1;
+}
+
+.popup-container h3 {
+  margin-top: 10px;
+}
+
+.comments-container {
+  width: 100%;
+  text-align: left;
+  margin-left: 30%;
+}
+
+.comments-container h3 {
+  margin-left: 10%;
 }
