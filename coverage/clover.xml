@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1685022425316" clover="3.2.0">
-  <project timestamp="1685022425316" name="All files">
-    <metrics statements="120" coveredstatements="25" conditionals="31" coveredconditionals="1" methods="16" coveredmethods="4" elements="167" coveredelements="30" complexity="0" loc="120" ncloc="120" packages="4" files="4" classes="4"/>
+<coverage generated="1685025267780" clover="3.2.0">
+  <project timestamp="1685025267780" name="All files">
+    <metrics statements="119" coveredstatements="24" conditionals="31" coveredconditionals="1" methods="16" coveredmethods="4" elements="166" coveredelements="29" complexity="0" loc="119" ncloc="119" packages="4" files="4" classes="4"/>
     <package name="modules">
       <metrics statements="2" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="1"/>
       <file name="store.js" path="/Users/binodbhusal/Desktop/Moviehub-Webapp/src/modules/store.js">
@@ -39,9 +39,9 @@
       </file>
     </package>
     <package name="modules.show">
-      <metrics statements="102" coveredstatements="23" conditionals="25" coveredconditionals="1" methods="9" coveredmethods="3"/>
+      <metrics statements="101" coveredstatements="22" conditionals="25" coveredconditionals="1" methods="9" coveredmethods="3"/>
       <file name="commentPopup.js" path="/Users/binodbhusal/Desktop/Moviehub-Webapp/src/modules/show/commentPopup.js">
-        <metrics statements="102" coveredstatements="23" conditionals="25" coveredconditionals="1" methods="9" coveredmethods="3"/>
+        <metrics statements="101" coveredstatements="22" conditionals="25" coveredconditionals="1" methods="9" coveredmethods="3"/>
         <line num="7" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
         <line num="9" count="1" type="stmt"/>
@@ -116,34 +116,33 @@
         <line num="106" count="3" type="cond" truecount="0" falsecount="2"/>
         <line num="108" count="3" type="stmt"/>
         <line num="109" count="3" type="stmt"/>
-        <line num="110" count="3" type="stmt"/>
+        <line num="112" count="1" type="stmt"/>
         <line num="113" count="1" type="stmt"/>
         <line num="114" count="1" type="stmt"/>
-        <line num="115" count="1" type="stmt"/>
-        <line num="117" count="1" type="stmt"/>
+        <line num="116" count="1" type="stmt"/>
+        <line num="118" count="1" type="stmt"/>
         <line num="119" count="1" type="stmt"/>
         <line num="120" count="1" type="stmt"/>
         <line num="121" count="1" type="stmt"/>
         <line num="122" count="1" type="stmt"/>
-        <line num="123" count="1" type="stmt"/>
-        <line num="125" count="1" type="cond" truecount="1" falsecount="1"/>
-        <line num="126" count="0" type="stmt"/>
-        <line num="128" count="1" type="stmt"/>
-        <line num="130" count="1" type="stmt"/>
-        <line num="131" count="0" type="cond" truecount="0" falsecount="4"/>
-        <line num="132" count="0" type="stmt"/>
+        <line num="124" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="125" count="0" type="stmt"/>
+        <line num="127" count="1" type="stmt"/>
+        <line num="129" count="1" type="stmt"/>
+        <line num="130" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="131" count="0" type="stmt"/>
+        <line num="133" count="0" type="stmt"/>
         <line num="134" count="0" type="stmt"/>
         <line num="135" count="0" type="stmt"/>
-        <line num="136" count="0" type="stmt"/>
+        <line num="140" count="0" type="stmt"/>
         <line num="141" count="0" type="stmt"/>
-        <line num="142" count="0" type="stmt"/>
-        <line num="143" count="0" type="cond" truecount="0" falsecount="4"/>
-        <line num="144" count="0" type="stmt"/>
+        <line num="142" count="0" type="cond" truecount="0" falsecount="4"/>
+        <line num="143" count="0" type="stmt"/>
+        <line num="145" count="0" type="stmt"/>
         <line num="146" count="0" type="stmt"/>
         <line num="147" count="0" type="stmt"/>
         <line num="148" count="0" type="stmt"/>
         <line num="149" count="0" type="stmt"/>
-        <line num="150" count="0" type="stmt"/>
       </file>
     </package>
   </project>
