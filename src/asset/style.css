@@ -76,7 +76,6 @@ header a {
   transform: translate(-50%, -50%) !important;
   overflow-y: scroll;
   overflow-x: hidden;
-  border: 1px solid grey;
   border-radius: 5px;
 }
 
