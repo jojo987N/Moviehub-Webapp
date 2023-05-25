@@ -11,7 +11,7 @@ import CommentPopup from './modules/show/commentPopup.js';
 (async () => {
   const app = localStorage.getItem('app') || await (new App()).id;
   localStorage.setItem('app', app);
-  await init();
+  // await init();
 
   const store = new Store();
   await store.display();

@@ -8,6 +8,7 @@ html {
 
 body {
   font-family: 'Lato', sans-serif;
+  background-color: #fed049;
 }
 
 header {
@@ -45,10 +46,12 @@ header a {
   position: absolute;
   top: 10px;
   right: 10px;
-  font-size: 16px;
+  font-size: 22px;
   background: none;
   border: none;
   cursor: pointer;
+  color: #f1f1f1;
+  font-weight: 700;
 }
 
 .popup-container {
@@ -56,7 +59,7 @@ header a {
   padding: 20px;
   width: 50%;
   height: 95%;
-  border: 1px solid #000;
+  border-radius: 1em;
 }
 
 .popup-container img {
@@ -74,6 +77,7 @@ header a {
   margin-top: 8px;
   background-color: #fed049;
   padding-inline: 10px;
+  border-radius: 8px;
 }
 
 .s-content h4 {
@@ -117,7 +121,7 @@ header a {
   color: #fff;
   border-radius: 8px;
   cursor: pointer;
-  border: none;
+  border: 1px solid #f1f1f1;
   font-size: 15px;
 }
 
@@ -128,14 +132,29 @@ header a {
 
 .popup-container h3 {
   margin-top: 10px;
+  color: #f1f1f1;
 }
 
 .comments-container {
   width: 100%;
   text-align: left;
   margin-left: 30%;
+  color: #f1f1f1;
 }
 
 .comments-container h3 {
   margin-left: 10%;
+}
+
+.content {
+  background-color: #333;
+  color: #ea9215;
+  padding: 3rem;
+  width: 50%;
+  box-shadow: 5px 5px #333;
+  border-radius: 16px;
+}
+
+.content img {
+  max-width: 100%;
 }

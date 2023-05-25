@@ -26,10 +26,11 @@ export default class CommentPopup {
     const popupContainer = document.createElement('div');
     popupContainer.classList.add('popup-container');
 
-    popupContainer.style.backgroundColor = '#d3d3d3';
+    popupContainer.style.backgroundColor = '#333';
     popupContainer.style.position = 'fixed';
     popupContainer.style.top = '50%';
     popupContainer.style.left = '50%';
+    popupContainer.style.border = '1px solid #f1f1f1';
     popupContainer.style.transform = 'translate(-50%, -50%)';
     popupContainer.style.zIndex = '9999';
 
@@ -78,7 +79,7 @@ export default class CommentPopup {
     const submitButton = document.createElement('button');
     submitButton.classList.add('submit-button');
     submitButton.textContent = 'Comment';
-    submitButton.addEventListener('click', this.submit.bind(this)); // Bind the submit method to the class instance
+    submitButton.addEventListener('click', this.submit.bind(this));
 
     popupContainer.appendChild(submitButton);
 
@@ -116,7 +117,7 @@ export default class CommentPopup {
 
     const countComment = await this.commentCounter();
     const countComments = document.createElement('h3');
-    countComments.textContent = `Total Comments( ${countComment})`;
+    countComments.textContent = `Total Comments ( ${countComment} )`;
     commentsContainer.appendChild(countComments);
     this.commentCounter();
 
