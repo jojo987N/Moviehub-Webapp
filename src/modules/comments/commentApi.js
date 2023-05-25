@@ -36,7 +36,7 @@ export default class CommentApi {
     if (!response.ok) {
       throw new Error('Failed to fetch comments');
     }
-    const comments = await response.json();
+    const comments = await response.json().catch(() => []);
     if (!Array.isArray(comments)) {
       throw new Error('Invalid comments data');
     }
