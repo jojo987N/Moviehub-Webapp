@@ -1,15 +1,15 @@
 import './style.scss';
 import './style.css';
+import './asset/style.css';
 import Store from './modules/store.js';
 import App from './modules/app.js';
-import init, { display } from './modules/utils.js';
+import { display } from './modules/utils.js';
 import CommentPopup from './modules/show/commentPopup.js';
 import { DEFAULT_NB_ITEMS } from './modules/global.js';
 
 (async () => {
   const app = localStorage.getItem('app') || await (new App()).id;
   localStorage.setItem('app', app);
-  // await init();
   const store = new Store();
   const shows = await store.shows;
   const count = DEFAULT_NB_ITEMS;
