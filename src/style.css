@@ -95,6 +95,7 @@ header a {
   height: 35px;
   display: block;
   width: 100%;
+
   /* margin: 10px auto; */
   border: 1px solid #333;
   outline: none;
@@ -138,12 +139,20 @@ header a {
   width: 100%;
 }
 
+.totalComment {
+  margin: 10px;
+  color: #f1f1f1;
+  width: 20%;
+  text-align: center;
+}
+
 .comments-container {
   width: 100%;
-  text-align: left;
+
   /* margin-left: 30%; */
   color: #f1f1f1;
   word-wrap: break-word;
+
   /* border: 1px solid white; */
   text-align: center;
   display: flex;
@@ -152,12 +161,13 @@ header a {
   align-items: center;
   padding: 10px;
   gap: 5px;
-
-
 }
+
 .comments-container p {
-  width: 50%;
+  width: 40%;
+  text-align: left;
 }
+
 .comments-container h3 {
   margin-left: 10%;
 }
