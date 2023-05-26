@@ -94,21 +94,23 @@ header a {
 .popup-container input {
   height: 35px;
   display: block;
-  width: 40%;
-  margin: 10px auto;
+  width: 100%;
+  /* margin: 10px auto; */
   border: 1px solid #333;
   outline: none;
   border-radius: 8px;
+  padding: 10px;
 }
 
 .popup-container textarea {
   height: 100px;
   display: block;
-  width: 40%;
+  width: 100%;
   margin: 10px auto;
   border: 1px solid #333;
   border-radius: 8px;
   outline: none;
+  padding: 10px;
 }
 
 .popup-container .submit-button {
@@ -131,17 +133,31 @@ header a {
 }
 
 .popup-container h3 {
-  margin-top: 10px;
+  margin: 10px;
   color: #f1f1f1;
+  width: 100%;
 }
 
 .comments-container {
   width: 100%;
   text-align: left;
-  margin-left: 30%;
+  /* margin-left: 30%; */
   color: #f1f1f1;
-}
+  word-wrap: break-word;
+  /* border: 1px solid white; */
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  gap: 5px;
 
+
+}
+.comments-container p {
+  width: 50%;
+}
 .comments-container h3 {
   margin-left: 10%;
 }
