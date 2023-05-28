@@ -19,6 +19,5 @@ export default class Animation {
     this.container.parentElement.classList.add('hide');
     document.querySelector('footer').classList.remove('hide');
     document.querySelector('.content').classList.remove('hide');
-    document.querySelector('.popup-container').classList.remove('hide');
   }
 }
