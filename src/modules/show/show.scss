@@ -40,16 +40,21 @@ img {
   button {
     padding: 10px 40px;
     cursor: pointer;
+    background-color: black;
+    transition: background-color 1s ease 0s;
+    // color: #c1ff72;
 
-    @include font-generic(normal, 15px, 400, 1px, hsl(0, 0%, 25%));
+    @include font-generic(normal, 13.5px, 300, 1px,  #c1ff72);
 
-    box-shadow: 2px 3px hsl(0, 0%, 75%);
+    // box-shadow: 2px 3px hsl(0, 0%, 75%);
     border: none;
     border-radius: 5px;
   }
 
-  button:active {
-    background: hsl(0, 0%, 65%);
-    color: white;
+  button:hover {
+    // background: hsl(0, 0%, 65%);
+    // color: white;
+    background-color: hsl(0, 0%, 75%);
+    color: black;
   }
 }

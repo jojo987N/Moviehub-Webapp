@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Lato:ital,wght@0,400;0,700;0,900;1,400&family=Lobster&family=Oswald&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@mixin font-generic($font-style, $font-size, $font-weight, $word-spacing, $color, $font-family: "Roboto") {
+  font-style: $font-style;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  word-spacing: $word-spacing;
+  color: $color;
+  font-family: $font-family, sans-serif;
+}
+
+html {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+header {
+  width: 100%;
+  display: flex;
+
+  /* flex-direction: row; */
+  align-items: center;
+
+  /* justify-content: space-evenly; */
+  font-family: 'Lato', sans-serif;
+  padding: 20px 15%;
+  background-color: #333;
+
+  /* padding: 10px 15px; */
+  letter-spacing: 0.01em;
+  font-size: 15px;
+  margin: auto;
+}
+
+header ul li {
+  display: flex;
+  gap: 3.5rem;
+  list-style: none;
+
+  /* margin-top: 5px; */
+  margin-left: 22%;
+
+  /* border: 1px solid white; */
+  width: 100%;
+}
+
+header a {
+  text-decoration: none;
+  color: #fff;
+
+  /* margin-right: 3.5rem; */
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.headerlogo {
+  width: 120px;
+  height: 46px;
+  margin: 0;
+
+  /* margin-left: 50px;
+  margin-right: 60px; */
+}
+
+.popup-container {
+  text-align: center;
+
+  /* padding: 20px; */
+  width: 33%;
+  height: 98%;
+  transform: translate(-50%, -50%) !important;
+  border: 1px solid hsl(0, 0%, 75%);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  border-radius: 5px;
+
+  .s-content {
+    display: flex;
+    background-color: #fed049;
+    margin: 5% 0;
+
+    @include font-generic(normal, 13px, 400, 2px, hsl(0, 0%, 25%), 'Lato');
+
+    p {
+      display: flex;
+      flex-direction: column;
+      padding: 10px;
+      gap: 4px;
+    }
+
+    .language {
+      flex-grow: 1;
+    }
+
+    .schedule {
+      flex-grow: 1;
+    }
+  }
+
+  .comments-container {
+    width: 80%;
+
+    /* margin-left: 30%; */
+    color: #f1f1f1;
+    word-wrap: break-word;
+
+    /* border: 1px solid white; */
+
+    /* text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; */
+
+    /* padding: 10px; */
+    gap: 5px;
+    margin-left: 10%;
+    margin-right: 10%;
+
+    /* border: 1px solid green; */
+    p {
+      .date-comment {
+        font-style: italic;
+        font-size: 12px;
+      }
+
+      .username {
+        font-weight: bold;
+        margin-left: 10px;
+      }
+
+      .comment-msg {
+        display: block;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  .button-container {
+    // border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    padding: 3%;
+    padding-bottom: 10%;
+
+    .submit-button {
+      background-color: black;
+      transition: background-color 1s ease 0s;
+      // height: 30px;
+      // width: 20%;
+      // margin-left: -20%;
+      // text-align: left;
+      padding: 3% 7%;
+      // background: black;
+      color: #c1ff72;
+      border-radius: 8px;
+      cursor: pointer;
+      border: none;
+      font-size: 15px;
+      letter-spacing: 1px;
+    }
+
+    .submit-button:hover {
+      // color: #ea9215;
+      // background-color: #f1f1f1;
+      // opacity: 0.3;
+      background-color: hsl(0, 0%, 75%);
+      color: black;
+      // font-weight: bold;
+    }
+  }
+}
+
+.popup-container img {
+  /* width: 80%; */
+
+  /* height: auto; */
+  width: auto;
+  height: 97vh;
+
+  /* object-fit: cover;   */
+
+  /* height: 40%; */
+}
+
+.hidden {
+  display: none;
+}
+
+.popup-container h1 {
+  background-color: #333;
+  color: #fff;
+  padding-inline: 10px;
+}
+
+.popup-container input {
+  height: 35px;
+  display: block;
+  width: 80%;
+
+  /* margin: 10px auto; */
+  border: 1px solid #333;
+  outline: none;
+  border-radius: 8px;
+  margin: 4% 10%;
+}
+
+.popup-container textarea {
+  height: 100px;
+  display: block;
+  width: 80%;
+
+  /* margin: 10px auto; */
+  border: 1px solid #333;
+  border-radius: 8px;
+  outline: none;
+  margin: 4% 10%;
+}
+
+.background-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  // width: 100vw;
+  // height: 100vh;
+  // border: 1px solid black;
+  z-index: 1000;
+  box-sizing: border-box;
+  // filter: blur(5px);
+  background: rgb(193, 199, 208, 0.6);
+  margin: 0;
+  backdrop-filter: blur(8px);
+  mix-blend-mode: multiply;
+}
+
+.no-scroll {
+  overflow: hidden;
+}

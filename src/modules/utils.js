@@ -1,3 +1,4 @@
+import Anim from './anim.js';
 import Animation from './animation/animation.js';
 import { DEFAULT_INCREMENT_NB_ITEMS } from './global.js';
 import ItemCounter from './itemsCounter.js';
@@ -8,12 +9,7 @@ import Show from './show/show.js';
 export default async function display(shows, count) {
   const likes = await Likes.store();
 
-  document.querySelector('.content').innerHTML = `${shows.map((v) => (new Show(v)).render(likes)).slice(0, count).join('')}<div class="bt-show-more">
-  <div class="container-anim">
-    <div id='anim'></div>
-  </div>
-  <button class="show-more">Show More <span class="nb-items"></span></button>
-</div>`;
+  document.querySelector('.content').innerHTML = `${shows.map((v) => (new Show(v)).render(likes)).slice(0, count).join('')} ${Anim.render('anim', '<button class="show-more">Show More <span class="nb-items"></span></button>')}`;
 
   const nbItems = document.querySelectorAll('.nb-items');
   [...nbItems].forEach((el) => {

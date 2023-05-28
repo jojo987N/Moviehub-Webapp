@@ -1,6 +1,6 @@
 import './style.scss';
 import './style.css';
-import './asset/style.css';
+import './asset/style.scss';
 import Store from './modules/store.js';
 import App from './modules/app.js';
 import display from './modules/utils.js';
@@ -28,10 +28,20 @@ document.addEventListener('click', (event) => {
     const commentsPopup = new CommentPopup(selectedItem);
     commentsPopup.loadPopup();
   }
-});
-document.addEventListener('click', (event) => {
   if (event.target.classList.contains('close-button')) {
     const popupContainer = event.target.closest('.popup-container');
     popupContainer.remove();
+    document.querySelector('.background-popup').remove();
+    document.body.classList.remove('no-scroll');
+  }
+  if (!event.target.classList.contains('commentsButton')) {
+    // const popupContainer = event.target.closest('.popup-container');
+    if (document.querySelector('.popup-container')) {
+      if (!event.target.closest('.popup-container')) {
+        document.querySelector('.popup-container').remove();
+        document.querySelector('.background-popup').remove();
+        document.body.classList.remove('no-scroll');
+      }
+    }
   }
 });
