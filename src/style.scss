@@ -69,7 +69,7 @@ body {
 
       @include font-generic(normal, 15px, 400, 1px, hsl(0, 0%, 25%));
 
-      box-shadow: 2px 3px hsl(0, 0%, 75%);
+      // box-shadow: 2px 3px hsl(0, 0%, 75%);
       border: none;
       border-radius: 5px;
     }
@@ -83,11 +83,6 @@ body {
   .footer {
     width: 100%;
     height: 10vh;
-    // display: flex;
-    // align-items: center;
-    // border-top: 2px solid black;
-    // padding: 0 10px;
-    // border: 1px solid black;
 
     .footer-2 {
       display: flex;
